@@ -1,7 +1,5 @@
 # 🌱 Groot – A Lightweight Git-like Version Control System
 
-> “I am Groot!” – A custom version control system inspired by Git, built entirely in **Node.js**.
-
 Groot is a minimal yet functional version control system that allows you to `init`, `add`, `commit`, view `log`s, and even see `diff`s between commits — all without using Git. It operates using its own `.groot` directory to manage files, commits, and content snapshots.
 
 ---
@@ -17,5 +15,28 @@ Groot is a minimal yet functional version control system that allows you to `ini
 - 🔐 Uses SHA-1 hashing for content IDs
 
 ---
+
+## 🚀 Getting Started
+
+### 1. Make the Script Executable
+
+At the top of your `groot.js` file, ensure you have the following line to tell the system it's a Node.js executable:
+
+```js
+#!/usr/bin/env node
+chmod +x groot.js
+./groot.js
+```
+
+---
+
+## 🛠️ Usage Commands
+
+### 🔹 Add a file to staging
+
+```bash
+./groot.js add sample.txt
+```
+
 
 
