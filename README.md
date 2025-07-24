@@ -38,5 +38,30 @@ chmod +x groot.js
 ./groot.js add sample.txt
 ```
 
+### 🔹 Commit changes
+
+```bash
+./groot.js commit "Initial commit"
+```
+
+### 🔹 View commit history
+```bash
+./groot.js log
+```
+
+### 🔹 Show file diffs for a specific commit
+
+
+```bash
+./groot.js show <commit_hash>
+```
+
+✅ Shows changes with colored output:
+
+- 🟩 **Green** for additions  
+- 🟥 **Red** for deletions  
+- 🟨 **Yellow** for unchanged lines
+
+
 
 
