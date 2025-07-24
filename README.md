@@ -63,5 +63,37 @@ chmod +x groot.js
 - 🟨 **Yellow** for unchanged lines
 
 
+---
+
+## 🔍 Internals: How Groot Works
+
+- **Staging Area**: Tracked in `.groot/index` as a JSON array of `{ path, hash }` objects.
+- **Commits**: Stored in `.groot/objects/` as JSON blobs, each representing a snapshot of files and metadata.
+- **Content Hashing**: Uses `SHA-1` (via Node.js `crypto` module) to uniquely identify file contents and commits.
+- **HEAD**: The `.groot/HEAD` file always points to the latest commit’s hash.
+
+---
+
+## 🧠 Design Highlights
+
+- No external dependencies for versioning logic — clean and modular.
+- Custom object storage architecture (like Git’s blob model) using `objects/` folder.
+- Recursive parent-pointer-based commit history for clean traversal and logging.
+- File diffs are shown using colored terminal output via the `diff` and `chalk` libraries.
+
+---
+
+## 📦 Dependencies
+
+Install the required dependencies with:
+
+```bash
+npm install chalk diff commander
+```
+
+
+
+
+
 
 
